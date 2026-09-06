@@ -1,0 +1,195 @@
+/**
+ * Two-Copy Printable Memo Styling
+ * Construction Materials Shop Management & Accounting System
+ */
+
+.memo-dual-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.memo-voucher {
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 24px;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  position: relative;
+  page-break-inside: avoid;
+}
+
+.memo-watermark-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+}
+
+.memo-voucher.shop-copy .memo-watermark-tag {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+.memo-voucher.customer-copy .memo-watermark-tag {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #60a5fa;
+}
+
+.memo-header {
+  text-align: center;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.shop-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.shop-subtitle {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.memo-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.memo-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+}
+
+.memo-items-table th {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 6px 8px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.memo-items-table td {
+  border: 1px solid #cbd5e1;
+  padding: 6px 8px;
+}
+
+.memo-items-table .text-right {
+  text-align: right;
+}
+
+.memo-items-table .text-center {
+  text-align: center;
+}
+
+.memo-totals-table {
+  width: 320px;
+  margin-left: auto;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.memo-totals-table td {
+  padding: 4px 8px;
+}
+
+.memo-totals-table .total-label {
+  font-weight: 600;
+}
+
+.memo-totals-table .grand-total-row {
+  font-weight: 800;
+  font-size: 1rem;
+  border-top: 2px solid #0f172a;
+  border-bottom: 2px solid #0f172a;
+}
+
+.memo-signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 8px;
+}
+
+.sign-line {
+  width: 180px;
+  border-top: 1px dashed #475569;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  padding-top: 4px;
+}
+
+.memo-footer-note {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 6px;
+}
+
+/* Print Rules */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print,
+  .app-sidebar,
+  .app-navbar,
+  .btn,
+  #toast-container {
+    display: none !important;
+  }
+
+  .app-main, .app-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .memo-dual-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 20px !important;
+  }
+
+  .memo-voucher {
+    border: 1px solid #000000 !important;
+    padding: 16px !important;
+    page-break-inside: avoid !important;
+  }
+
+  .memo-watermark-tag {
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+  }
+}

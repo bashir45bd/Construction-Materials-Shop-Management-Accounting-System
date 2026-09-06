@@ -1,0 +1,64 @@
+/**
+ * Dark Mode Theme Definition
+ * Construction Materials Shop Management & Accounting System
+ */
+
+[data-theme="dark"] {
+  --bg-app: #090d16;
+  --bg-surface: #111827;
+  --bg-surface-secondary: #1f2937;
+  --bg-sidebar: #0b0f19;
+  --bg-sidebar-hover: #1f2937;
+  --bg-sidebar-active: #2563eb;
+
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-sidebar: #e5e7eb;
+  --text-sidebar-muted: #6b7280;
+
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-light: rgba(59, 130, 246, 0.15);
+  --primary-text: #ffffff;
+
+  --success: #10b981;
+  --success-light: rgba(16, 185, 129, 0.15);
+  --warning: #f59e0b;
+  --warning-light: rgba(245, 158, 11, 0.15);
+  --danger: #ef4444;
+  --danger-light: rgba(239, 68, 68, 0.15);
+  --info: #38bdf8;
+  --info-light: rgba(56, 189, 248, 0.15);
+
+  --border-color: #374151;
+  --border-focus: #60a5fa;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.6), 0 1px 2px -1px rgb(0 0 0 / 0.6);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.6), 0 2px 4px -2px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.7), 0 4px 6px -4px rgb(0 0 0 / 0.7);
+}
+
+[data-theme="dark"] .table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+[data-theme="dark"] .global-search-input {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .form-control {
+  background-color: #111827;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .form-control:focus {
+  background-color: #1f2937;
+}
+
+[data-theme="dark"] .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,134 @@
+/**
+ * Responsive Design Rules
+ * Construction Materials Shop Management & Accounting System
+ */
+
+/* Desktop / Wide Screens */
+@media (min-width: 1025px) {
+  .sales-pos-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(520px, 580px);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .memo-cart-table {
+    max-height: 420px;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sales-pos-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(580px, 640px);
+  }
+}
+
+/* Tablets and Laptops */
+@media (max-width: 1024px) {
+  .app-sidebar {
+    position: fixed;
+    left: -100%;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .app-sidebar.show {
+    left: 0;
+  }
+
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 35;
+  }
+
+  .sidebar-backdrop.show {
+    display: block;
+  }
+
+  .sidebar-toggle-btn {
+    display: inline-flex !important;
+  }
+
+  .global-search-container {
+    width: 220px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .app-navbar {
+    padding: 0 1rem;
+  }
+
+  .app-content {
+    padding: 1rem;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .global-search-container {
+    display: none; /* Collapses to search icon on mobile */
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .sales-pos-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .memo-cart-table {
+    max-height: 360px;
+    overflow-y: auto;
+  }
+
+  .top-products-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .memo-product-filters {
+    width: 100%;
+    max-width: none !important;
+    flex-wrap: wrap;
+  }
+
+  .memo-product-filters input {
+    flex: 1 1 100%;
+  }
+
+  .btn {
+    min-height: 44px; /* Touch-friendly */
+  }
+
+  .memo-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .memo-totals-table {
+    width: 100%;
+  }
+
+  .modal-dialog {
+    margin: 0.5rem;
+    max-height: 95vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-products-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
